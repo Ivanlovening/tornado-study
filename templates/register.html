@@ -1,0 +1,17 @@
+
+{% extends "base.html" %}
+{% block body%}
+    <form action="" method="post" id="register_form">
+        {% raw xsrf_form_html() %}
+        <p><span>用户名：</span><input type="text" name="username" id="username"></p>
+        <p><span>邮箱：</span><input type="text" name="email" id="email"></p>
+        <p><span>密码：</span><input type="password" name="password" id="password"></p>
+        <p><span>确认密码：</span><input type="password" name="confirm_password" id="confirm_password"></p>
+        <p><input type="button" value="确认注册" id="register"></p>
+    </form>
+{% end %}
+
+{% block script%}
+    <script src="{{static_url('js/register.js')}}"></script>
+{% end %}
+

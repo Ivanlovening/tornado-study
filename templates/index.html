@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block header %}
+    <h2>Login</h2>
+{% end %}
+
+{% block body %}
+    <form action="" method="post">
+        {% raw xsrf_form_html() %}
+        <p><span>UserName:<input type="text" id="username"></span></p>
+        <p><span>Password:<input type="password" id="password"></span></p>
+        <p><input type="button" value="登录" id="login"></p>
+    </form>
+    <a href="/register">注册账号</a>
+{% end %}
+
+{% block script %}
+<script src="{{static_url('js/login.js')}}"></script>
+{% end %}
+
